@@ -1,0 +1,11 @@
+{
+  "name": "nexivo-hub-license-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NEXIVO HUB license-based shop dashboard with live Discord bot stock bridge",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}

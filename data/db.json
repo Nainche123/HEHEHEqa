@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "owner",
+      "username": "0nTop",
+      "passwordHash": "ce512e777134cf997076ef19987b3647:06a1d1ffea4efdc7ee49d6e7e6af1d35279c5604569c15d84ba94bbd193a4155672d14f56c6f168b0b6b91ec30eacf8506ebff9bc99a4f9ec73a27d0e5f96717",
+      "plan": "PRO_PREMIUM",
+      "role": "OWNER",
+      "licenseId": "lic_b46ec426fa7a2b3676",
+      "createdAt": "2026-09-23T11:12:50.620Z"
+    }
+  ],
+  "licenses": [
+    {
+      "id": "lic_b46ec426fa7a2b3676",
+      "key": "VEX-PRP-53692F-433420-8327B0",
+      "plan": "PRO_PREMIUM",
+      "status": "ACTIVE",
+      "userId": "owner",
+      "createdAt": "2026-09-23T11:12:50.621Z",
+      "activatedAt": "2026-09-23T11:12:50.621Z",
+      "expiresAt": null,
+      "durationDays": 0,
+      "discordUserId": null,
+      "orderId": null,
+      "issuerUserId": null,
+      "issuerUsername": null,
+      "botSecret": "vh_AZo7NWVss7CI-FDrmHaDvtYsSE6IkWHt",
+      "bot": null,
+      "owner": true
+    }
+  ],
+  "sessions": [
+    {
+      "token": "vYYIIp78SvLgTPIdnmLANPhaMnXavwF1X4_g1gwNXQA",
+      "userId": "owner",
+      "createdAt": "2026-09-23T11:14:18.215Z",
+      "expiresAt": "2026-10-23T11:14:18.215Z"
+    }
+  ],
+  "products": [],
+  "orders": [],
+  "settings": {
+    "owner": {}
+  },
+  "audit": [],
+  "events": [],
+  "bots": [],
+  "botCredentials": [],
+  "botConfig": {},
+  "meta": {
+    "nextEventId": 1
+  }
+}

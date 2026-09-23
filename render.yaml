@@ -1,0 +1,67 @@
+services:
+  - type: web
+    name: nexivo-hub-web
+    runtime: node
+    region: singapore
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    disk:
+      name: nexivo-hub-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NEXIVO_OPERATOR_USER
+        sync: false
+      - key: NEXIVO_OPERATOR_PASSWORD
+        sync: false
+      - key: NEXIVO_BOT_WORKER_SECRET
+        sync: false
+      - key: NEXIVO_LICENSE_ISSUE_SECRET
+        sync: false
+      - key: NEXIVO_BOT_CLIENT_ID
+        sync: false
+      - key: NEXIVO_BOT_INVITE_URL
+        sync: false
+      - key: NEXIVO_BOT_DISPLAY_NAME
+        value: NEXIVO HUB Bot
+      - key: NEXIVO_DB_FILE
+        value: /var/data/db.json
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: NEXIVO_SESSION_DAYS
+        value: "30"
+
+  - type: worker
+    name: nexivo-hub-discord-bot
+    runtime: python
+    region: singapore
+    plan: starter
+    buildCommand: pip install -r BOT-INTEGRATION/requirements.txt
+    startCommand: python BOT-INTEGRATION/NEXIVO_HUB_bot_integrated.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: WEBSITE_URL
+        sync: false
+      - key: NEXIVO_BOT_WORKER_SECRET
+        sync: false
+      - key: GUILD_ID
+        value: "0"
+      - key: OWNER_ID
+        value: "0"
+      - key: ORDER_CATEGORY_ID
+        value: "0"
+      - key: REVIEW_CHANNEL_ID
+        value: "0"
+      - key: PURCHASE_LOG_CHANNEL_ID
+        value: "0"
+      - key: VERIFICATION_CHANNEL_ID
+        value: "0"
+      - key: VERIFIED_ROLE_ID
+        value: "0"
+      - key: BUYER_ROLE_ID
+        value: "0"
+      - key: ADMIN_NAME
+        value: "NEXIVO HUB 운영팀"
